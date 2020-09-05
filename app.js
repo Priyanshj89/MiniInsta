@@ -86,4 +86,11 @@ Process
   - Used mainly to manage login/out state of user in this project
 - Unlike/like api using $push,$pull, exec 
 - delete post using remove and using filter function in react
+- follow,unfollow array and passing it in state
+- my following posts by teversing following array
+- profile pic default and update
+- Deployment to heroku 
+- email for password reset
+- posts in top down order
+- search functionality
 */

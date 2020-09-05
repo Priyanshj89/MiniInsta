@@ -14,7 +14,7 @@ const Signin = () => {
         if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
            return M.toast({html: 'Invalid Email',classes:"#d32f2f red darken-2"})
         }
-       // M.toast({html: "Signing in...Please Wait",classes:"#ffa726 orange lighten-1",displayLength:"1500"})
+        M.toast({html: "Signing in...Please Wait",classes:"#ffa726 orange lighten-1",displayLength:"3000"})
         fetch("/signin",{
             method:"post",
             headers:{
@@ -33,6 +33,7 @@ const Signin = () => {
             else{
                 localStorage.setItem("jwt",data.token)
                 localStorage.setItem("user",JSON.stringify(data.user))
+                console.log("hrolok")
                 dispatch({type:"USER",payload:data.user})
                 M.toast({html: "Sighed In Successfully",classes: "#4caf50 green"})
                 history.push('/')

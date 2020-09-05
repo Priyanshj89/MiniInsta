@@ -35,7 +35,7 @@ const Profile = () => {
         .then(res=>res.json())
         .then(data=>{
            setUrl(data.url)
-           console.log(data)
+           //console.log(data)
            
            fetch('/updatepic',{
             method:"put",
@@ -48,7 +48,7 @@ const Profile = () => {
             })
         }).then(res=>res.json())
         .then(result=>{
-            console.log(result)
+            //console.log(result)
             localStorage.setItem("user",JSON.stringify({...state,pic:result.pic}))
             dispatch({type:"UPDATEPIC",payload:result.pic})
             //window.location.reload()

@@ -23,6 +23,6 @@ const postSchema = new mongoose.Schema({
         type:ObjectId,
         ref:"User"  //same name as User model,each post will have user id
     }
-})
+},{timestamps:true})
 
 mongoose.model("Post",postSchema);

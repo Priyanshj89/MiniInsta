@@ -13,7 +13,7 @@ const Home = () => {
             },
         }).then(res=>res.json())
         .then(result=>{
-            console.log(result)
+            //console.log(result)
             setData(result.posts)
         })
     },[])
@@ -130,7 +130,9 @@ const Home = () => {
             {
                 data.map(item=>{
                     return(
+                       
                         <div className="card home-card" key = {item._id}>
+                            {console.log("yo")}
                             <h5> <Link to = {item.postedBy._id !== state._id?"/profile/"+item.postedBy._id:"/profile"}>{item.postedBy.name}</Link> 
                             {item.postedBy._id == state._id 
                             && <i className="material-icons" style={

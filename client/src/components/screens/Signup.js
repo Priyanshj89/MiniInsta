@@ -40,7 +40,7 @@ const Signup = () => {
         if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
             return M.toast({html: 'Invalid Email',classes:"#d32f2f red darken-2"})
          }
-        // M.toast({html: "Signing up...Please Wait",classes:"#ffa726 orange lighten-1",displayLength:"1500"})
+         M.toast({html: "Signing up...Please Wait",classes:"#ffa726 orange lighten-1",displayLength:"1500"})
          fetch("/signup",{
              method:"post",
              headers:{
@@ -61,7 +61,7 @@ const Signup = () => {
                  M.toast({html: data.message,classes: "#4caf50 green"})
                  history.push('/signin')
              }
-             console.log(data);
+            // console.log(data);
          }))
          .catch(err=>{
              console.log(err);

@@ -21,9 +21,11 @@ router.get('/allpost',requireLogin,(req,res)=>{
     Post.find()
     .populate("postedBy","_id name email") 
     .populate("comments.postedBy","_id name")
+    .sort('-createdAt')
     //populate used to reference documents
     //in other collections, populates the thing which postedBy refers to (ID)
     .then(posts=>{
+        //console.log(posts);
         res.json({posts:posts});
     })
     .catch(err=>{
@@ -37,6 +39,7 @@ router.get('/getsubpost',requireLogin,(req,res)=>{
     Post.find({postedBy:{$in:req.user.following}})
     .populate("postedBy","_id name")
     .populate("comments.postedBy","_id name")
+    .sort('-createdAt')
     //.sort('-createdAt')
     .then(posts=>{
         res.json({posts})
