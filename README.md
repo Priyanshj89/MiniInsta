@@ -8,3 +8,5 @@ Implementation of some ot the core functionalities of instagram using MERN stact
 - like unlike posts
 - follow unfollow users
 - and some other basic features
+
+Deployed at https://instagramclone89.herokuapp.com/
