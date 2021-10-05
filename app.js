@@ -90,7 +90,7 @@ Process
 - my following posts by teversing following array
 - profile pic default and update
 - Deployment to heroku 
-- email for password reset
-- posts in top down order
-- search functionality
+- email for password reset//nahi hua
+- posts in top down order using timestamps
+- search functionality//nicely done
 */

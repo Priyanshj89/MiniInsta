@@ -33,7 +33,7 @@ const Signin = () => {
             else{
                 localStorage.setItem("jwt",data.token)
                 localStorage.setItem("user",JSON.stringify(data.user))
-                console.log("hrolok")
+                //console.log("hrolok")
                 dispatch({type:"USER",payload:data.user})
                 M.toast({html: "Sighed In Successfully",classes: "#4caf50 green"})
                 history.push('/')
