@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
         type:String,
         default:"https://res.cloudinary.com/priyanshjain/image/upload/v1599127267/no-image_xcmh83.gif"
     },
-    followers:[{type:ObjectId, ref:"User"}],
+    followers:[{type:ObjectId, ref:"User"}], //ref is used to create relations
     following:[{type:ObjectId, ref:"User"}]
 })
 
