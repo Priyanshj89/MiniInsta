@@ -1,12 +1,11 @@
 # MiniInsta
-Implementation of some ot the core functionalities of instagram using MERN stact(MongoDB, Express, React, Nodejs)
+Implementation of some of the core functionalities of instagram using MERN stack(MongoDB, Express, React, Nodejs)
 
 - Login and logout using jwt
 - search users
-- profile
+- create user profile
 - update profile pic
-- like unlike posts
+- like/unlike posts
 - follow unfollow users
-- and some other basic features
 
 Deployed at https://instagramclone89.herokuapp.com/
